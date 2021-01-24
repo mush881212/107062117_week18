@@ -252,6 +252,18 @@ body {
   line-height: 24px;
   letter-spacing: 3px;
 }
+.dropdown-item,
+.dropdown-menu {
+  background-color: #14072f;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.dropdown-item:hover,
+.dropdown-menu:hover {
+  background-color: #14072f;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
 .ml6 {
   position: relative;
 }
@@ -311,7 +323,6 @@ a:hover {
   background: rgba(29, 35, 65, 0.6);
   width: 100%;
   height: 80px;
-  border-radius: 0px;
 }
 
 .events-1:hover {

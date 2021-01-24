@@ -234,7 +234,7 @@
         <div class="hr margin-top-bottom"></div>
         <div class="events-container align-column-center">
           <div
-            class="event align-row-center padding-30px invisible"
+            class="event-2 align-row-center padding-30px invisible"
             v-for="(item, index) in events"
             :key="index"
           >
@@ -313,12 +313,19 @@ body {
   line-height: 24px;
   letter-spacing: 3px;
 }
+.dropdown-item,
+.dropdown-menu {
+  background-color: #14072f;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.dropdown-item:hover,
+.dropdown-menu:hover {
+  background-color: #14072f;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
 .button {
-  /* background: linear-gradient(
-    0deg,
-    rgba(170, 169, 245, 0.6) 0%,
-    rgba(89, 78, 242, 0.6) 100%
-  ); */
   background: rgba(170, 169, 245, 0.6);
   border: 0px;
   border-radius: 10px;
@@ -394,7 +401,7 @@ a:hover {
   width: 100%;
 }
 .events-container {
-  width: 90%;
+  width: 80%;
   height: 500px;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -403,13 +410,12 @@ a:hover {
 .events-container::-webkit-scrollbar {
   display: none;
 }
-.event {
-  width: 80%;
+.event-2 {
+  width: 100%;
   background: rgba(29, 35, 65, 0.6);
-  box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0px;
 }
-.event:hover {
+.event-2:hover {
   box-shadow: 0 0 10px rgba(167, 189, 250, 0.72),
     0 0 20px rgba(167, 181, 250, 0.72), 0px 0px 30px rgba(167, 181, 250, 0.72);
   transition: all 0.5s ease-out;
@@ -850,7 +856,7 @@ export default {
       }
     },
     fadeIn() {
-      var events = document.getElementsByClassName("event");
+      var events = document.getElementsByClassName("event-2");
       if (window.scrollY >= 800 && !this.event_below) {
         events.forEach((element) => {
           element.classList.remove("invisible");
